@@ -46,4 +46,14 @@ function swapNumber(num1, num2) {
     return [num1, num2];
 }
 swapNumbers = swapNumber(10, 20);
-console.log(swapNumbers[2]);
+console.log(swapNumbers[1]);
+//any datatype
+/*
+    The any type allows us to assign literally “any” particular value to that variable,
+    simulating what we know as plain JavaScript - where types can dynamically be assigned
+    from different types,
+    such as a String value becoming a Number. The Any type. When to use Any in TypeScript.
+*/
+let department;
+department = "IT";
+department = 20;
