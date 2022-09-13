@@ -33,5 +33,5 @@ function getIteams(items) {
 }
 let concatResult = getIteams([1, 2, 3]);
 let concatResultString = getIteams(["a", "b", "c"]);
-console.log("Genaric functions" + concatResultString);
-console.log("Genaric function Strings" + concatResult);
+console.log("Genaric functions Strings" + concatResultString);
+console.log("Genaric function Number" + concatResult);
