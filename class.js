@@ -12,13 +12,6 @@ var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (
 };
 var _Employee_id;
 Object.defineProperty(exports, "__esModule", { value: true });
-Address;
-{
-    street: string;
-    city: string;
-    state: string;
-    pin: string;
-}
 class Employee {
     //typescript not supported for multiple constructers
     constructor(id, name, address) {
@@ -26,6 +19,9 @@ class Employee {
         __classPrivateFieldSet(this, _Employee_id, id, "f");
         this.name = name;
         this.address = address;
+    }
+    Login() {
+        return { name: "Ishan", age: 25, id: 1, email: "ishanmadhawa44@gmail.com" };
     }
     // method
     getNameWithAddress() {
