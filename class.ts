@@ -1,11 +1,11 @@
-import {Login, User} from './interface';
+import {Login, User} from './interface'; // importing interface
 interface Address{
     street:string;
     city:string;
     state:string;
     pin:string;
 }
-class Employee implements Login{
+class Employee implements Login{ //implement interface
     #id:number;
     name:string;
     protected address:Address;
