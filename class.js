@@ -11,6 +11,14 @@ var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (
     return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
 var _Employee_id;
+Object.defineProperty(exports, "__esModule", { value: true });
+Address;
+{
+    street: string;
+    city: string;
+    state: string;
+    pin: string;
+}
 class Employee {
     //typescript not supported for multiple constructers
     constructor(id, name, address) {
@@ -36,7 +44,7 @@ class Employee {
     }
 }
 _Employee_id = new WeakMap();
-let ishan = new Employee(1, "ishan", "Colmbo SL");
+let ishan = new Employee(1, "ishan", { street: "Bathiya Road", city: "Wellawatta", state: "Western", pin: "72" });
 console.log(ishan);
 ishan.EmpId = 100;
 console.log(ishan.EmpId);
@@ -57,5 +65,5 @@ class Manager extends Employee {
         return `${this.name} Manager Stays at ${this.address}`;
     }
 }
-let kavindya = new Manager(2, "Kavindya", "Rathanapura");
+let kavindya = new Manager(2, "Kavindya", { street: "Bathiya Road", city: "Wellawatta", state: "Western", pin: "72" });
 console.log(kavindya.getNameWithAddress());

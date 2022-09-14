@@ -1,13 +1,23 @@
-class Employee{
+import {Login, User} from './interface';
+interface Address{
+    street:string;
+    city:string;
+    state:string;
+    pin:string;
+}
+class Employee implements Login{
     #id:number;
     name:string;
-    protected address:string;
+    protected address:Address;
 
     //typescript not supported for multiple constructers
-    constructor(id:number, name:string, address:string){
+    constructor(id:number, name:string, address:Address){
         this.#id = id;
         this.name = name;
         this.address = address;
+    }
+    Login(): User {
+       return {name:"Ishan",age:25,id:1,email:"ishanmadhawa44@gmail.com"};
     }
     // method
     getNameWithAddress():string{
@@ -28,7 +38,7 @@ class Employee{
     }
 }
 
-let ishan = new Employee(1,"ishan","Colmbo SL");
+let ishan = new Employee(1,"ishan",{street:"Bathiya Road",city:"Wellawatta",state:"Western",pin:"72"});
 console.log(ishan);
 ishan.EmpId = 100;
 console.log(ishan.EmpId);
@@ -42,7 +52,7 @@ console.log(address);
 
 //inhertance 
 class Manager extends Employee{
-    constructor(id:number, name:string, address:string){
+    constructor(id:number, name:string, address:Address){
         super(id,name,address);
     }
     // method over riding
@@ -51,5 +61,5 @@ class Manager extends Employee{
     } 
 }
 
-let kavindya = new Manager(2,"Kavindya","Rathanapura");
+let kavindya = new Manager(2,"Kavindya",{street:"Bathiya Road",city:"Wellawatta",state:"Western",pin:"72"});
 console.log(kavindya.getNameWithAddress());
