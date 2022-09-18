@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Room } from './rooms';
+import { Room, RoomList } from './rooms';
 
 @Component({
   selector: 'hniv-rooms',
@@ -16,6 +16,37 @@ export class RoomsComponent implements OnInit {
     availableRooms:10,
     bookedRooms:10
   };
+
+  roomList :RoomList[] =[
+    {
+    roomNumber:1,
+    roomType : 'Deluxe Room',
+    amenities: 'AC,Free wifi,TV,Bathroom',
+    price:500,
+    photo  : "",
+    checkingTime : new Date ('11-nov-2020'),
+    checkingoutTime: new Date ('11-nov-2020')
+  },
+  {
+    roomNumber:2,
+    roomType : 'Deluxe Room',
+    amenities: 'AC,Free wifi,TV,Bathroom',
+    price:1500,
+    photo  : "",
+    checkingTime : new Date ('11-nov-2020'),
+    checkingoutTime: new Date ('11-nov-2020')
+  },
+  {
+    roomNumber:3,
+    roomType : 'Private Room',
+    amenities: 'AC,Free wifi,TV,Bathroom',
+    price:1500,
+    photo  : "",
+    checkingTime : new Date ('11-nov-2020'),
+    checkingoutTime: new Date ('11-nov-2020')
+  },
+
+]
   constructor() { }
 
   ngOnInit(): void {
@@ -26,6 +57,19 @@ export class RoomsComponent implements OnInit {
   }
 
 }
+/**
+ * Directives are use to change behavior and appearance of DOM element
+ * Directives can implement lifecycle hooks
+ * directive can have not template
+ * two types of directives
+    Structural Directives
+    Attribute Directives
+
+    Attribute directives modify the appearance or behavior of DOM elements.
+     Structural directives add or remove elements from the DOM.
+     Structural directives are one of the most powerful features of Angular,
+     and yet they're frequently misunderstood.
+ */
 /*
 Property binding in Angular helps you
 set values for properties of HTML elements or directives.
