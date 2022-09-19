@@ -1,3 +1,15 @@
 <h1>Hello World</h1>
 <hniv-rooms></hniv-rooms>
+<div [ngSwitch]="role">
+    <div *ngSwitchCase="'User'">
+      Welcome User
+    </div>
+    <div *ngSwitchCase="'Admin'">
+      Welcome Admin
+    </div>
+    <div *ngSwitchDefault>
+      Your are to Autharized
+    </div>
+</div>
+
 
