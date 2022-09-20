@@ -3,7 +3,9 @@
 <!--Native html Binding angular also support-->
 <div [hidden]="hideRooms">
   <p>Number of Rooms</p>
-  <div [innerText]="numberOfRooms"></div>
+
+    <div [ngStyle]="{'color':rooms.availableRooms?'green':'red'}" [innerText]="numberOfRooms"></div>
+
 </div>
 <!--Optional chaining-->
 {{rooms?.availableRooms ?? 'No Rooms'}}
@@ -18,7 +20,7 @@
       <th>Room Amenties</th>
       <th>Checkin Time</th>
     </tr>
-    <tr *ngFor="let room of  roomList let e=even; let o = odd; let i=index">
+    <tr [ngClass]="e? 'even' :'odd'" *ngFor="let room of  roomList let e=even; let o = odd; let i=index">
       <td>{{i}}</td>
       <td>{{e?"Even":"Odd"}}</td>
       <td>{{room.roomNumber}}</td>
