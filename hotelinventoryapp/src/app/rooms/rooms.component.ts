@@ -25,7 +25,8 @@ export class RoomsComponent implements OnInit {
     price:500,
     photo  : "",
     checkingTime : new Date ('11-nov-2020'),
-    checkingoutTime: new Date ('11-nov-2020')
+    checkingoutTime: new Date ('11-nov-2020'),
+    rating:4.54645646
   },
   {
     roomNumber:2,
@@ -34,7 +35,8 @@ export class RoomsComponent implements OnInit {
     price:1500,
     photo  : "",
     checkingTime : new Date ('11-nov-2020'),
-    checkingoutTime: new Date ('11-nov-2020')
+    checkingoutTime: new Date ('11-nov-2020'),
+    rating:3.54564645
   },
   {
     roomNumber:3,
@@ -43,7 +45,8 @@ export class RoomsComponent implements OnInit {
     price:1500,
     photo  : "",
     checkingTime : new Date ('11-nov-2020'),
-    checkingoutTime: new Date ('11-nov-2020')
+    checkingoutTime: new Date ('11-nov-2020'),
+    rating:3.5456456
   },
 
 ]
@@ -86,3 +89,29 @@ set paths programmatically, and share values between components.
   Interpolation refers to embedding expressions into marked up text.
   By default, interpolation uses the double curly braces {{ and }} as delimiters.
   */
+
+ /*
+
+  pipes are used for data transformation
+  pipe s don't change actiula object
+
+  Built-in Pipes
+  DatePipe
+  UpperCasePipe
+  LowerCasePipe
+  CurrencyPipe
+  PresentPipe
+  JasonPipe
+  SlicePipe
+  AsyncPipe
+
+  Use pipes to transform strings, currency amounts, dates, and other data for display.
+  Pipes are simple functions to use in template expressions to accept an input value and return
+  a transformed value. Pipes are useful because you can use them throughout your application,
+  while only declaring each pipe once. For example, you would use a pipe to show a date as April 15,
+   1988 rather than the raw string format.
+
+ */
+
+
+
