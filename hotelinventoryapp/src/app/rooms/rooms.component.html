@@ -22,7 +22,7 @@
       <th>Checkin Time</th>
       <th>Rating</th>
     </tr>
-    <tr [ngClass]="e? 'even' :'odd'" *ngFor="let room of  roomList | slice:0:1;let e=even; let o = odd; let i=index">
+    <tr [ngClass]="e? 'even' :'odd'" *ngFor="let room of  roomList ;let e=even; let o = odd; let i=index">
       <td>{{i}}</td>
       <td>{{e?"Even":"Odd"}}</td>
       <td>{{room.roomNumber}}</td>
@@ -38,4 +38,4 @@
   </table>
 </div>
 <!--Event Binding-->
-<button (click)="toggle()">Toggle</button>
+<button  class="btn btn-primary"(click)="toggle()">Toggle</button>
