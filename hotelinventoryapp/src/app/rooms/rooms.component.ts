@@ -56,13 +56,16 @@ export class RoomsComponent implements OnInit {
     },
 
   ]
-  
+
   }
 
   toggle(){
     this.hideRooms = !this.hideRooms;
   }
 
+  slelectRoom(room:RoomList){
+    console.log(room);
+  }
 }
 /**
  * Directives are use to change behavior and appearance of DOM element

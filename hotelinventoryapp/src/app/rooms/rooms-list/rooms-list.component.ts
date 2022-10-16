@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { RoomList } from './../rooms';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'hniv-rooms-list',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoomsListComponent implements OnInit {
 
+  @Input() rooms:RoomList[]=[]
+  @Output() roomSelected = new EventEmitter<RoomList>();
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  slelectRoom(room:RoomList){
+    this.roomSelected.emit(room);
+  };
 }
